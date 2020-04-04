@@ -1,0 +1,57 @@
+\documentclass{article}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\newtheorem*{theorem}{Theorem}
+\newtheorem*{definition}{Definition}
+\newtheorem*{proposition}{Proposition}
+
+\title{Notes on Baire Category Theorem}
+\author{Gabrielle Li}
+\date{April, 2020}
+
+\begin{document}
+
+\maketitle
+
+\begin{definition}[Nowhere dense]
+Let X be a topological space. A subset A is called nowhere dense in X if the interior of the closure of A is empty, i.e. Int ($\overline{A}) = \emptyset$.
+\end{definition}
+
+\begin{proposition} Let X be a topological space, then
+\begin{enumerate}
+    \item Any subset of a nowhere dense set is nowhere dense.
+    \item The union of finitely many nowhere dense sets is nowhere dense.
+    \item A subset is nowhere dense iff its closure is nowhere dense.
+    \item A subset is nowhere dense iff its complement contains a dense set.
+\end{enumerate}
+\end{proposition}
+
+\begin{definition}[Meagre set/First category]
+In a topological space X, a subset S is a meagre subset (or of the first category) if it is the union of countably many nowhere dense subsets in X.
+\end{definition}
+
+\begin{definition}[Second category]
+In a topological space X, a subset S is of the second category if it is not of first category.
+\end{definition}
+
+\begin{proposition} Let X be a topological space, then
+\begin{enumerate}
+    \item Any subset of a meager set is meager.
+    \item The union of finitely many meagre sets is nowhere meagre.
+\end{enumerate}
+\end{proposition}
+
+\begin{theorem}[Baire Category Theorem] Let X be a complete metric space, then
+\begin{enumerate}
+\item Let $G_{1}, G_{2}$...be a sequence of dense open subsets X. Then $G = \bigcap^{\infty}_{n=1}G_{n}$ is dense in X.
+\item If X is the union of countably many closed sets, then at least one of the closed sets has non-empty interior. This means that a complete metric space is of the second category.
+\item The complement of a meagre subset is dense and of the second category.
+\end{enumerate}
+\end{theorem}
+
+\begin{theorem}[Principle of uniform boundness (Osgood)] Let U be a set of the second category in a metric space X and let $\mathcal{F}$ be a family of continuous functions $f: X \rightarrow \mathbb{R}$ such that {$f(u): f \in \mathcal{F}$} is bounded for every u $\in$ U. Then the elements of $\mathcal{F}$ are uniformly bounded for in some ball B in X, i.e. $\vert f(x) \vert$ is bounded by some n for all $f \in \mathcal{F}$ and all $x \in B$.
+\end{theorem}
+
+\end{document}
